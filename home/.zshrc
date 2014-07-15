@@ -49,24 +49,12 @@ plugins=(git, git-flow, bower, virtualenv, virtualenvwrapper, z)
 
 source $ZSH/oh-my-zsh.sh
 
-# ZSH autocompletion path
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
-
 # User configuration
 
 # Path
-export PATH="$PATH:$HOME/$NODE_ROOT/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-# Load nvm
-[ -s "/home/marcin/.nvm/nvm.sh" ] && . "/home/marcin/.nvm/nvm.sh"
-
-# Load rvm into a shell session as a function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Load homesick
-[[ -s "$HOME/.homesick/repos/homeshick/homeshick.sh" ]] && source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # Virtualenv Wrapper
 export WORKON_HOME=$HOME/.virtualenvs
@@ -82,4 +70,7 @@ alias tmuxinator='TERM=xterm-256color tmuxinator'
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+
+# Homeshick autocompletion path
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
